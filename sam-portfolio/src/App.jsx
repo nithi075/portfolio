@@ -144,24 +144,19 @@ export default function App() {
           </div>
 
 
-
           <div className="card popular">
-
-            <h3>Business Website</h3>
-
-            <h1>₹8000</h1>
-
-            <ul>
-              <li>All Starter Features</li>
-              <li>Order System</li>
-              <li>SEO Friendly</li>
-              <li>Premium Design</li>
-              <li>High Performance</li>
-            </ul>
-
-            <button>Most Popular</button>
-
-          </div>
+  <h3>Portfolio Website</h3>
+  <h1>₹2000</h1>
+  <ul>
+    <li>Personal Branding</li>
+    <li>Responsive Gallery</li>
+    <li>Contact Form Integration</li>
+    <li>Modern & Elegant Layout</li>
+    <li>Social Media Links</li>
+  </ul>
+  <button>Get Started</button>
+</div>
+  
 
 
 

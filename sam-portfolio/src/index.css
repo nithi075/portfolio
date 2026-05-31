@@ -1,0 +1,329 @@
+/* ==================================
+   GOOGLE FONTS
+================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ==================================
+   RESET
+================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==================================
+   ROOT VARIABLES
+================================== */
+
+:root {
+  --bg-color: #050505;
+  --card-bg: #0a0a0a;
+
+  --text-white: #ffffff;
+  --text-grey: #9c9c9c;
+
+  --border-color: rgba(255,255,255,0.08);
+
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==================================
+   BODY
+================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==================================
+   HEADINGS
+================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+/* ==================================
+   ALL SPANS
+================================== */
+
+span {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ==================================
+   TEXT
+================================== */
+
+p,
+a,
+li,
+input,
+textarea,
+label {
+  font-family: var(--font-body);
+}
+
+/* ==================================
+   LINKS
+================================== */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==================================
+   IMAGES
+================================== */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==================================
+   SECTION SPACING
+================================== */
+
+.section-padding {
+  padding: 100px 20px;
+}
+
+/* ==================================
+   TYPOGRAPHY UTILITIES
+================================== */
+
+.huge-text {
+  font-size: clamp(4rem, 12vw, 10rem);
+  line-height: 0.9;
+}
+
+.large-text {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.small-label {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-grey);
+}
+
+/* ==================================
+   LUXURY CARD
+================================== */
+
+.card-luxury {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.card-luxury:hover {
+  border-color: rgba(255,255,255,0.2);
+  transform: translateY(-6px);
+}
+
+/* ==================================
+   BUTTONS
+================================== */
+
+.btn-primary,
+.btn-secondary {
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: white;
+  color: black;
+  border: none;
+  padding: 18px 34px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 18px 34px;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: black;
+}
+
+/* ==================================
+   MOBILE FIRST
+================================== */
+
+@media (min-width: 768px) {
+
+  .section-padding {
+    padding: 140px 80px;
+  }
+
+}
+/* ==================================
+   MOBILE (390px - 767px)
+================================== */
+
+@media (max-width: 767px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .section-padding {
+    padding: 80px 20px;
+  }
+
+  .huge-text {
+    font-size: clamp(3.5rem, 16vw, 5rem);
+    line-height: 0.9;
+    letter-spacing: -1px;
+  }
+
+  .large-text {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  span {
+    letter-spacing: 2px;
+  }
+
+  .small-label {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+  }
+
+  .card-luxury {
+    padding: 24px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 18px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/* ==================================
+   SMALL MOBILE (320px - 389px)
+================================== */
+
+@media (max-width: 389px) {
+
+  .section-padding {
+    padding: 70px 16px;
+  }
+
+  .huge-text {
+    font-size: 3rem;
+  }
+
+  .large-text {
+    font-size: 1.6rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 16px;
+  }
+
+}
+
+/* ==================================
+   TABLET (768px - 1023px)
+================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .section-padding {
+    padding: 120px 50px;
+  }
+
+  .huge-text {
+    font-size: clamp(5rem, 10vw, 7rem);
+  }
+
+}
+
+/* ==================================
+   LAPTOP (1024px - 1439px)
+================================== */
+
+@media (min-width: 1024px) {
+
+  .section-padding {
+    padding: 140px 80px;
+  }
+
+}
+
+/* ==================================
+   LARGE SCREEN (1440px+)
+================================== */
+
+@media (min-width: 1440px) {
+
+  .section-padding {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .huge-text {
+    font-size: 10rem;
+  }
+
+}

@@ -1,0 +1,95 @@
+/* --- Video Editing Detail Page Styles --- */
+
+.service-detail-container {
+  padding: 100px 10%;
+  background: #050505;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #888;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  color: #fff;
+}
+
+.huge-text {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 60px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.price-card {
+  padding: 50px;
+  border: 1px solid #222;
+  background: #0a0a0a;
+  transition: all 0.4s ease;
+}
+
+/* Video specific hover - purple accent for creative/editing theme */
+.price-card:hover {
+  border-color: #a855f7; 
+  transform: translateY(-10px);
+}
+
+.price-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.price-card ul {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+}
+
+.price-card ul li {
+  margin-bottom: 15px;
+  color: #888;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-detail-container {
+    padding: 60px 5%;
+  }
+  .price-card {
+    padding: 30px;
+  }
+}

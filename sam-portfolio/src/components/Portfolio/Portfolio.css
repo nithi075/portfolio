@@ -1,0 +1,97 @@
+/* --- Portfolio Grid Layout --- */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 60px;
+}
+
+/* --- Portfolio Card Container --- */
+.portfolio-card {
+  position: relative;
+  aspect-ratio: 4/5; /* Premium Portrait look */
+  overflow: hidden;
+  background: #111;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* --- Image Styling with Zoom Effect --- */
+.card-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.portfolio-card:hover .card-img {
+  transform: scale(1.1);
+}
+
+/* --- Overlay with Shadow for Text Readability --- */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 40px;
+  width: 100%;
+  z-index: 2;
+  /* Stronger gradient to ensure text visibility */
+  background: linear-gradient(
+    to top, 
+    rgba(0, 0, 0, 0.95) 0%, 
+    rgba(0, 0, 0, 0.6) 60%, 
+    transparent 100%
+  );
+  transition: background 0.4s ease;
+}
+
+.portfolio-card:hover .card-overlay {
+  background: linear-gradient(
+    to top, 
+    rgba(0, 0, 0, 0.98) 0%, 
+    rgba(0, 0, 0, 0.75) 70%, 
+    transparent 100%
+  );
+}
+
+/* --- Typography & Text Styling --- */
+.card-overlay h3 {
+  font-size: 1.6rem;
+  margin: 5px 0 0 0;
+  color: #fff;
+  font-family: var(--font-heading);
+  text-shadow: 0 4px 10px rgba(0,0,0,0.8); /* Text readability shadow */
+  line-height: 1.2;
+}
+
+.category {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e0e0e0;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 20px;
+  }
+  
+  .portfolio-card {
+    aspect-ratio: 4/5;
+  }
+  
+  .card-overlay {
+    padding: 25px;
+  }
+  
+  .card-overlay h3 {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,172 @@
+/* --- Hero Section Container --- */
+.hero-container {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+  background: radial-gradient(circle at 80% 20%, #1a1a1a, #050505);
+}
+
+/* --- Content Styling --- */
+.hero-eyebrow {
+  font-family: var(--font-body);
+  letter-spacing: 4px;
+  color: var(--text-grey);
+  font-size: 0.75rem;
+  display: block;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.text-highlight {
+  color: #a0a0a0;
+  font-style: italic;
+  display: inline-block;
+}
+
+.hero-subtext {
+  max-width: 500px;
+  margin: 30px 0;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  line-height: 1.5;
+  color: var(--text-white);
+}
+
+/* --- CTA Buttons (Mobile First) --- */
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.btn-primary, .btn-secondary {
+  width: 100%;
+  padding: 18px;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* --- Footer Indicator --- */
+.hero-footer {
+  margin-top: 60px;
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  color: #444;
+  font-family: var(--font-body);
+}
+
+/* --- Desktop Scaling (768px+) --- */
+@media (min-width: 768px) {
+  .hero-container {
+    padding: 0 10%;
+  }
+  
+  .hero-cta {
+    flex-direction: row;
+    width: fit-content;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: auto;
+    padding: 16px 32px;
+  }
+}
+/* Premium Secondary Button */
+.btn-secondary {
+  padding: 16px 32px;
+  background: transparent; /* Transparent background */
+  color: var(--text-white);
+  border: 1px solid var(--text-white); /* White outline */
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.4s ease; /* Smooth transition */
+  text-transform: uppercase;
+}
+
+/* Hover Effect: Luxury Fill */
+.btn-secondary:hover {
+  background: var(--text-white); /* Fills white on hover */
+  color: #000; /* Text turns black */
+  border-color: var(--text-white);
+}
+
+/* Ensure consistent size with Primary */
+@media (max-width: 768px) {
+  .btn-secondary {
+    width: 100%;
+    padding: 18px;
+  }
+}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .hero-container {
+    min-height: 100vh;
+    padding: 0 20px;
+    justify-content: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+
+  .hero-subtext {
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 20px 0 30px;
+  }
+
+  .hero-cta {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 16px;
+    font-size: 0.9rem;
+  }
+
+  .hero-footer {
+    margin-top: 40px;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* Extra Small Devices */
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 0 15px;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.65rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 14px;
+    font-size: 0.85rem;
+  }
+
+  .hero-footer {
+    font-size: 0.55rem;
+  }
+}

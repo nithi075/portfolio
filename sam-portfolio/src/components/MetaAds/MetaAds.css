@@ -1,0 +1,73 @@
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 grid for mobile */
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.stat-card {
+  background: #0a0a0a;
+  padding: 30px 20px;
+  border: 1px solid #1a1a1a;
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 3rem; /* Huge Typography */
+  margin: 0;
+  color: var(--text-white);
+}
+
+.stat-card p {
+  color: var(--text-grey);
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .meta-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .stat-card {
+    padding: 20px 15px;
+    border-radius: 16px;
+  }
+
+  .stat-card h3 {
+    font-size: 2rem;
+  }
+
+  .stat-card p {
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .meta-grid {
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 18px 10px;
+  }
+
+  .stat-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .stat-card p {
+    font-size: 0.65rem;
+  }
+}

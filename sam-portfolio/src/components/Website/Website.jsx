@@ -15,7 +15,7 @@ const projects = [
       'Professional photography showcase website with premium design and smooth animations.',
     image:
       kornixaImg,
-    link: 'https://kornixa.com',
+    link: 'https://www.clicksbykorniza.in',
   },
   {
     category: 'Photography Portfolio',
@@ -24,7 +24,7 @@ const projects = [
       'Modern portfolio website designed for photographers and creators.',
     image:
       lensStudioImg,
-    link: 'https://your-photo-client.com',
+    link: 'https://www.dp-photography.in',
   },
 //   {
 //     category: 'Gym Portfolio',
@@ -51,7 +51,7 @@ const projects = [
       'Complete fashion shopping experience with secure payments.',
     image:
       priceImg,
-    link: 'https://your-store-one.com',
+    link: 'https://www.princyfashionboutique.shop',
   },
 //   {
 //     category: 'E-Commerce',
